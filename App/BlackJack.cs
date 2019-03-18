@@ -12,7 +12,9 @@ namespace App
     {
         public BlackJack(string player1, string player2, string dealer)
         {
-            Dealer deal = new Dealer { Name = dealer, CardDeck = Deck.GenerateCardDeck() };
+            List<Card> deck = Deck.GenerateCardDeck();
+            Dealer deal = new Dealer { Name = dealer, CardDeck = deck};
+            deal.Cards = deal.DealTwoCards();
             Player play1 = new Player { Name = player1, Cards = deal.DealTwoCards() };
             Player play2 = new Player { Name = player2, Cards = deal.DealTwoCards() };
         }
