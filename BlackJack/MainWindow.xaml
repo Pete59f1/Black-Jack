@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="662,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="662,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="662,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txt_Player1Name" ToolTip="First player name" HorizontalAlignment="Left" Height="23" Margin="662,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txt_Plauer2Name" ToolTip="Second player name" HorizontalAlignment="Left" Height="23" Margin="662,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txt_DealerName" ToolTip="Dealer name" HorizontalAlignment="Left" Height="23" Margin="662,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Name="btn_NewGame" Content="New game" HorizontalAlignment="Left" Margin="662,150,0,0" VerticalAlignment="Top" Width="75" Click="Btn_NewGame_Click"/>
 
     </Grid>
