@@ -8,8 +8,9 @@ using Domain;
 
 namespace App
 {
-    public class BlackJack
+    public class BlackJack : IPublisher
     {
+        private List<ISubscriber> subs = new List<ISubscriber>();
         public BlackJack(string player1, string player2, string dealer)
         {
             List<Card> deck = Deck.GenerateCardDeck();
@@ -17,6 +18,24 @@ namespace App
             deal.Cards = deal.DealStartUpCards();
             Player play1 = new Player { Name = player1, Cards = deal.DealStartUpCards() };
             Player play2 = new Player { Name = player2, Cards = deal.DealStartUpCards() };
+        }
+
+        public void NotifySubscribers()
+        {
+            foreach (ISubscriber sub in subs)
+            {
+                sub.Update(this);
+            }
+        }
+
+        public void RegisterSubscriber(ISubscriber observer)
+        {
+            subs.Add(observer);
+        }
+
+        public void RemoveSubscriber(ISubscriber observer)
+        {
+            subs.Remove(observer);
         }
     }
 }
