@@ -14,9 +14,9 @@ namespace App
         {
             List<Card> deck = Deck.GenerateCardDeck();
             Dealer deal = new Dealer { Name = dealer, CardDeck = deck};
-            deal.Cards = deal.DealTwoCards();
-            Player play1 = new Player { Name = player1, Cards = deal.DealTwoCards() };
-            Player play2 = new Player { Name = player2, Cards = deal.DealTwoCards() };
+            deal.Cards = deal.DealStartUpCards();
+            Player play1 = new Player { Name = player1, Cards = deal.DealStartUpCards() };
+            Player play2 = new Player { Name = player2, Cards = deal.DealStartUpCards() };
         }
     }
 }

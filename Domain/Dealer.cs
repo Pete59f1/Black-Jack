@@ -18,7 +18,7 @@ namespace Domain
             CardDeck.RemoveAt(0);
             return card;
         }
-        public List<Card> DealTwoCards()
+        public List<Card> DealStartUpCards()
         {
             List<Card> cards = new List<Card>();
             cards.Add(DealCard());
