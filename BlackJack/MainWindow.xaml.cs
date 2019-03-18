@@ -31,5 +31,10 @@ namespace BlackJack
         {
             //Update noget her!
         }
+
+        private void Btn_NewGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
