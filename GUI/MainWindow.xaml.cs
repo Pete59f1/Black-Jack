@@ -27,10 +27,33 @@ namespace GUI
 
         private void Btn_NewGame_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txt_FirstPlayerName.Text) && string.IsNullOrWhiteSpace(txt_SecondPlayerName.Text) && string.IsNullOrWhiteSpace(txt_DealerName.Text))
+            string firstName = "First Player";
+            string secondName = "Second Player";
+            string dealerName = "Dealer";
+
+            if (!IsNull(txt_FirstPlayerName.Text))
             {
-                jack = new BlackJack("First player", "Second player", "Dealer");
+                firstName = txt_FirstPlayerName.Text;
             }
+            if (!IsNull(txt_SecondPlayerName.Text))
+            {
+                secondName = txt_SecondPlayerName.Text;
+            }
+            if (!IsNull(txt_DealerName.Text))
+            {
+                dealerName = txt_DealerName.Text;
+            }
+            jack = new BlackJack(firstName, secondName, dealerName);
+        }
+        private bool IsNull(string name)
+        {
+            bool q = false;
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                q = true;
+                return q;
+            }
+            return q;
         }
 
 
