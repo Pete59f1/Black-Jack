@@ -15,10 +15,11 @@ using System.Windows.Shapes;
 using Interfaces;
 using App;
 
-namespace BlackJack
+namespace GUI
 {
     public partial class MainWindow : Window, ISubscriber
     {
+        private BlackJack jack;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,11 +28,6 @@ namespace BlackJack
         public void Update(IPublisher publisher)
         {
             //Update noget her!
-        }
-
-        private void Btn_NewGame_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

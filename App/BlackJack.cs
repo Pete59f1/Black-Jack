@@ -10,7 +10,6 @@ namespace App
 {
     public class BlackJack : IPublisher
     {
-        private List<ISubscriber> subs = new List<ISubscriber>();
         public BlackJack(string player1, string player2, string dealer)
         {
             List<Card> deck = Deck.GenerateCardDeck();
@@ -20,6 +19,9 @@ namespace App
             Player play2 = new Player { Name = player2, Cards = deal.DealStartUpCards() };
         }
 
+
+        //Observer Pattern//
+        private List<ISubscriber> subs = new List<ISubscriber>();
         public void NotifySubscribers()
         {
             foreach (ISubscriber sub in subs)
@@ -37,5 +39,6 @@ namespace App
         {
             subs.Remove(observer);
         }
+        //Observer Pattern//
     }
 }
