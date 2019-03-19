@@ -10,8 +10,10 @@ namespace Domain
     {
         private string name;
         private List<Card> cards;
+        private int points;
 
         public string Name { get { return name; } set { name = value; } }
         public List<Card> Cards { get { return cards; } set { cards = value; } }
+        public int Points { get { return points; } set { points = value; } }
     }
 }

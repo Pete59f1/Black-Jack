@@ -43,7 +43,14 @@ namespace GUI
             {
                 dealerName = txt_DealerName.Text;
             }
+
             jack = new BlackJack(firstName, secondName, dealerName);
+            lbl_FPlayerName.Content = firstName;
+            lbl_SPlayerName.Content = secondName;
+            lbl_DealerName.Content = dealerName;
+            lbl_FPlayerPoints.Content = jack.GetPlayerPoints(1);
+            lbl_SPlayerPoints.Content = jack.GetPlayerPoints(2);
+            lbl_DealerPoints.Content = jack.GetPlayerPoints(3);
         }
         private bool IsNull(string name)
         {

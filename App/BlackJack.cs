@@ -10,13 +10,91 @@ namespace App
 {
     public class BlackJack : IPublisher
     {
+        private List<Card> deck;
+        private Player play1;
+        private Player play2;
+        private Dealer deal;
+
         public BlackJack(string player1, string player2, string dealer)
         {
-            List<Card> deck = Deck.GenerateCardDeck();
-            Dealer deal = new Dealer { Name = dealer, CardDeck = deck};
+            deck = Deck.GenerateCardDeck();
+            deal = new Dealer { Name = dealer, CardDeck = deck};
+            play1 = new Player { Name = player1 };
+            play2 = new Player { Name = player2 };
+            StartOfGame();
+        }
+        private void StartOfGame()
+        {
             deal.Cards = deal.DealStartUpCards();
-            Player play1 = new Player { Name = player1, Cards = deal.DealStartUpCards() };
-            Player play2 = new Player { Name = player2, Cards = deal.DealStartUpCards() };
+            play1.Cards = deal.DealStartUpCards();
+            play2.Cards = deal.DealStartUpCards();
+
+            play1.Points = CalcPoints(play1.Cards);
+            play2.Points = CalcPoints(play2.Cards);
+            deal.Points = CalcPoints(deal.Cards);
+        }
+        private int CalcPoints(List<Card> cards)
+        {
+            int points = 0;
+            foreach (Card card in cards)
+            {
+                if (card.Value >= 2 && card.Value <= 9)
+                {
+                    points += card.Value;
+                }
+                else if (card.Value > 9 && card.Value < 14)
+                {
+                    points += 10;
+                }
+                else
+                {
+                    if (points >= 11)
+                    {
+                        points += 1;
+                    }
+                    else
+                    {
+                        points += 11;
+                    }
+                }
+            }
+
+            if (cards.Count.Equals(5) && points <= 21)
+            {
+                points = 21;
+            }
+            return points;
+        }
+
+        public int GetPlayerPoints(int playerNumber)
+        {
+            if (playerNumber.Equals(1))
+            {
+                return play1.Points;
+            }
+            else if (playerNumber.Equals(2))
+            {
+                return play2.Points;
+            }
+            else
+            {
+                return deal.Points;
+            }
+        }
+        public List<Card> GetPlayerCards(int playerNumber)
+        {
+            if (playerNumber.Equals(1))
+            {
+                return play1.Cards;
+            }
+            else if (playerNumber.Equals(2))
+            {
+                return play2.Cards;
+            }
+            else
+            {
+                return deal.Cards;
+            }
         }
 
 

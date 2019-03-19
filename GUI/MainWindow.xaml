@@ -11,6 +11,12 @@
         <TextBox Name="txt_FirstPlayerName" HorizontalAlignment="Left" Height="23" Margin="662,10,0,0" TextWrapping="Wrap" ToolTip="First player" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="txt_DealerName" HorizontalAlignment="Left" Height="23" Margin="662,110,0,0" TextWrapping="Wrap" ToolTip="Dealer" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="txt_SecondPlayerName" HorizontalAlignment="Left" Height="23" Margin="662,60,0,0" TextWrapping="Wrap" ToolTip="Second player" VerticalAlignment="Top" Width="120"/>
+        <Label Name="lbl_FPlayerName" Content="Label" HorizontalAlignment="Left" Margin="65,27,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_SPlayerName" Content="Label" HorizontalAlignment="Left" Margin="195,27,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_DealerName" Content="Label" HorizontalAlignment="Left" Margin="325,27,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_FPlayerPoints" Content="Label" HorizontalAlignment="Left" Margin="65,276,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_SPlayerPoints" Content="Label" HorizontalAlignment="Left" Margin="195,276,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_DealerPoints" Content="Label" HorizontalAlignment="Left" Margin="325,276,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
