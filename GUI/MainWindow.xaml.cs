@@ -25,9 +25,20 @@ namespace GUI
             InitializeComponent();
         }
 
+        private void Btn_NewGame_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_FirstPlayerName.Text) && string.IsNullOrWhiteSpace(txt_SecondPlayerName.Text) && string.IsNullOrWhiteSpace(txt_DealerName.Text))
+            {
+                jack = new BlackJack("First player", "Second player", "Dealer");
+            }
+        }
+
+
+        //Observer Pattern//
         public void Update(IPublisher publisher)
         {
             //Update noget her!
         }
+        //Observer Pattern//
     }
 }
