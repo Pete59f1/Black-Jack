@@ -83,7 +83,9 @@ namespace GUI
         //Observer Pattern//
         public void Update(IPublisher publisher)
         {
-            //Update noget her!
+            lbl_FPlayerPoints.Content = jack.GetPlayerPoints(1);
+            lbl_SPlayerPoints.Content = jack.GetPlayerPoints(2);
+            lbl_DealerPoints.Content = jack.GetPlayerPoints(3);
         }
         //Observer Pattern//
     }
