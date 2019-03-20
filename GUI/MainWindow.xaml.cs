@@ -51,7 +51,12 @@ namespace GUI
             lbl_FPlayerPoints.Content = jack.GetPlayerPoints(1);
             lbl_SPlayerPoints.Content = jack.GetPlayerPoints(2);
             lbl_DealerPoints.Content = jack.GetPlayerPoints(3);
+            PrintCards(1);
+            PrintCards(2);
+            PrintCards(3);
         }
+
+
         private bool IsNull(string name)
         {
             bool q = false;
@@ -64,18 +69,30 @@ namespace GUI
         }
         private void PrintCards(int playerNumber)
         {
+            List<string> cards = jack.GetPlayerCards(playerNumber);
             if (playerNumber.Equals(1))
             {
-                //Skriv kort ud!
-                jack.GetPlayerCards(1);
+                lb_FPlayerCards.Items.Clear();
+                for (int i = 0; i < cards.Count; i++)
+                {
+                    lb_FPlayerCards.Items.Add(cards.ElementAt(i));
+                }
             }
             else if (playerNumber.Equals(2))
             {
-                //Skriv
+                lb_SPlayerCards.Items.Clear();
+                for (int i = 0; i < cards.Count; i++)
+                {
+                    lb_SPlayerCards.Items.Add(cards.ElementAt(i));
+                }
             }
             else
             {
-                //Skriv
+                lb_DealerCards.Items.Clear();
+                for (int i = 0; i < cards.Count; i++)
+                {
+                    lb_DealerCards.Items.Add(cards.ElementAt(i));
+                }
             }
         }
 
