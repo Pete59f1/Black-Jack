@@ -62,6 +62,22 @@ namespace GUI
             }
             return q;
         }
+        private void PrintCards(int playerNumber)
+        {
+            if (playerNumber.Equals(1))
+            {
+                //Skriv kort ud!
+                jack.GetPlayerCards(1);
+            }
+            else if (playerNumber.Equals(2))
+            {
+                //Skriv
+            }
+            else
+            {
+                //Skriv
+            }
+        }
 
 
         //Observer Pattern//

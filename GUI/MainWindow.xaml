@@ -17,6 +17,9 @@
         <Label Name="lbl_FPlayerPoints" Content="Label" HorizontalAlignment="Left" Margin="65,276,0,0" VerticalAlignment="Top"/>
         <Label Name="lbl_SPlayerPoints" Content="Label" HorizontalAlignment="Left" Margin="195,276,0,0" VerticalAlignment="Top"/>
         <Label Name="lbl_DealerPoints" Content="Label" HorizontalAlignment="Left" Margin="325,276,0,0" VerticalAlignment="Top"/>
+        <ListBox Name="lb_FPlayerCards" HorizontalAlignment="Left" Height="135" Margin="33,110,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox Name="lb_SPlayerCards" HorizontalAlignment="Left" Height="135" Margin="164,110,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox Name="lb_DealerCards" HorizontalAlignment="Left" Height="135" Margin="293,110,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

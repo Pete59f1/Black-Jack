@@ -81,20 +81,31 @@ namespace App
                 return deal.Points;
             }
         }
-        public List<Card> GetPlayerCards(int playerNumber)
+        public List<string> GetPlayerCards(int playerNumber)
         {
+            List<string> cards = new List<string>();
             if (playerNumber.Equals(1))
             {
-                return play1.Cards;
+                foreach (Card c in play1.Cards)
+                {
+                    cards.Add(c.DisplayName);
+                }
             }
             else if (playerNumber.Equals(2))
             {
-                return play2.Cards;
+                foreach (Card c in play2.Cards)
+                {
+                    cards.Add(c.DisplayName);
+                }
             }
             else
             {
-                return deal.Cards;
+                foreach (Card c in deal.Cards)
+                {
+                    cards.Add(c.DisplayName);
+                }
             }
+            return cards;
         }
 
 
