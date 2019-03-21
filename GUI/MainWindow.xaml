@@ -20,6 +20,8 @@
         <ListBox Name="lb_FPlayerCards" HorizontalAlignment="Left" Height="165" Margin="35,106,0,0" VerticalAlignment="Top" Width="115"/>
         <ListBox Name="lb_SPlayerCards" HorizontalAlignment="Left" Height="165" Margin="164,106,0,0" VerticalAlignment="Top" Width="115"/>
         <ListBox Name="lb_DealerCards" HorizontalAlignment="Left" Height="165" Margin="293,106,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button Name="btn_HitMe" Content="Hit me" IsEnabled="False" HorizontalAlignment="Left" Margin="119,342,0,0" VerticalAlignment="Top" Width="75" Click="Btn_HitMe_Click"/>
+        <Button Name="btn_Hold" Content="Hold" IsEnabled="False" HorizontalAlignment="Left" Margin="248,342,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Hold_Click"/>
 
     </Grid>
 </Window>

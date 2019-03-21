@@ -54,6 +54,17 @@ namespace GUI
             PrintCards(1);
             PrintCards(2);
             PrintCards(3);
+
+            NewGameStart();
+        }
+        private void Btn_HitMe_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Btn_Hold_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
 
 
@@ -94,6 +105,21 @@ namespace GUI
                     lb_DealerCards.Items.Add(cards.ElementAt(i));
                 }
             }
+        }
+        private void NewGameStart()
+        {
+            txt_FirstPlayerName.IsEnabled = false;
+            txt_SecondPlayerName.IsEnabled = false;
+            txt_DealerName.IsEnabled = false;
+            btn_NewGame.IsEnabled = false;
+            lbl_SPlayerName.IsEnabled = false;
+            lbl_SPlayerPoints.IsEnabled = false;
+            lb_SPlayerCards.IsEnabled = false;
+            lbl_DealerName.IsEnabled = false;
+            lbl_DealerPoints.IsEnabled = false;
+            lb_DealerCards.IsEnabled = false;
+            btn_HitMe.IsEnabled = true;
+            btn_Hold.IsEnabled = true;
         }
 
 

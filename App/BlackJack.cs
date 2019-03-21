@@ -23,6 +23,7 @@ namespace App
             play2 = new Player { Name = player2 };
             StartOfGame();
         }
+
         private void StartOfGame()
         {
             deal.Cards = deal.DealStartUpCards();
@@ -58,7 +59,6 @@ namespace App
                     }
                 }
             }
-
             if (cards.Count.Equals(5) && points <= 21)
             {
                 points = 21;
@@ -118,12 +118,10 @@ namespace App
                 sub.Update(this);
             }
         }
-
         public void RegisterSubscriber(ISubscriber observer)
         {
             subs.Add(observer);
         }
-
         public void RemoveSubscriber(ISubscriber observer)
         {
             subs.Remove(observer);
