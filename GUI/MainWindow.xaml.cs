@@ -57,7 +57,14 @@ namespace GUI
         }
         private void Btn_HitMe_Click(object sender, RoutedEventArgs e)
         {
-            jack.HitMe(currentPlayer);
+            if (!PlayerLose(currentPlayer))
+            {
+                jack.HitMe(currentPlayer);
+            }
+            else
+            {
+                btn_HitMe.IsEnabled = false;
+            }
         }
         private void Btn_Hold_Click(object sender, RoutedEventArgs e)
         {
@@ -164,11 +171,29 @@ namespace GUI
             bool q = false;
             if (playerNumber.Equals(1))
             {
-                if (int.Parse(lbl_FPlayerPoints.Content) > 21)
+                if (jack.GetPlayerPoints(1) > 21)
                 {
-
+                    q = true;
+                    return q;
                 }
             }
+            else if (playerNumber.Equals(2))
+            {
+                if (jack.GetPlayerPoints(2) > 21)
+                {
+                    q = true;
+                    return q;
+                }
+            }
+            else
+            {
+                if (jack.GetPlayerPoints(3) > 21)
+                {
+                    q = true;
+                    return q;
+                }
+            }
+            return q;
         }
 
 
