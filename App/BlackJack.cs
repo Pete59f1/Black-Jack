@@ -65,7 +65,7 @@ namespace App
             }
             return points;
         }
-
+        
         public int GetPlayerPoints(int playerNumber)
         {
             if (playerNumber.Equals(1))

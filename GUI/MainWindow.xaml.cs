@@ -129,6 +129,9 @@ namespace GUI
             lbl_FPlayerPoints.Content = jack.GetPlayerPoints(1);
             lbl_SPlayerPoints.Content = jack.GetPlayerPoints(2);
             lbl_DealerPoints.Content = jack.GetPlayerPoints(3);
+            PrintCards(1);
+            PrintCards(2);
+            PrintCards(3);
         }
         //Observer Pattern//
     }
