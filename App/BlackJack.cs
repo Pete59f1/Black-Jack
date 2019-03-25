@@ -65,7 +65,9 @@ namespace App
             }
             return points;
         }
-        
+
+
+        //Find data metoder
         public int GetPlayerPoints(int playerNumber)
         {
             if (playerNumber.Equals(1))
@@ -107,6 +109,7 @@ namespace App
             }
             return cards;
         }
+        //Find data metoder
 
 
         //Observer Pattern//

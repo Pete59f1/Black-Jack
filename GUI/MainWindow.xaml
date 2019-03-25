@@ -12,16 +12,17 @@
         <TextBox Name="txt_DealerName" HorizontalAlignment="Left" Height="23" Margin="662,110,0,0" TextWrapping="Wrap" ToolTip="Dealer" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="txt_SecondPlayerName" HorizontalAlignment="Left" Height="23" Margin="662,60,0,0" TextWrapping="Wrap" ToolTip="Second player" VerticalAlignment="Top" Width="120"/>
         <Label Name="lbl_FPlayerName" Content="Label" HorizontalAlignment="Left" Margin="65,27,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_SPlayerName" Content="Label" HorizontalAlignment="Left" Margin="195,27,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_DealerName" Content="Label" HorizontalAlignment="Left" Margin="325,27,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_SPlayerName" Content="Label" HorizontalAlignment="Left" Margin="225,27,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_DealerName" Content="Label" HorizontalAlignment="Left" Margin="355,27,0,0" VerticalAlignment="Top"/>
         <Label Name="lbl_FPlayerPoints" Content="Label" HorizontalAlignment="Left" Margin="65,276,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_SPlayerPoints" Content="Label" HorizontalAlignment="Left" Margin="195,276,0,0" VerticalAlignment="Top"/>
-        <Label Name="lbl_DealerPoints" Content="Label" HorizontalAlignment="Left" Margin="325,276,0,0" VerticalAlignment="Top"/>
-        <ListBox Name="lb_FPlayerCards" HorizontalAlignment="Left" Height="165" Margin="35,106,0,0" VerticalAlignment="Top" Width="115"/>
-        <ListBox Name="lb_SPlayerCards" HorizontalAlignment="Left" Height="165" Margin="164,106,0,0" VerticalAlignment="Top" Width="115"/>
-        <ListBox Name="lb_DealerCards" HorizontalAlignment="Left" Height="165" Margin="293,106,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label Name="lbl_SPlayerPoints" Content="Label" HorizontalAlignment="Left" Margin="225,276,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl_DealerPoints" Content="Label" HorizontalAlignment="Left" Margin="355,276,0,0" VerticalAlignment="Top"/>
+        <ListBox Name="lb_FPlayerCards" HorizontalAlignment="Left" Height="165" Margin="28,106,0,0" VerticalAlignment="Top" Width="115"/>
+        <ListBox Name="lb_SPlayerCards" HorizontalAlignment="Left" Height="165" Margin="177,106,0,0" VerticalAlignment="Top" Width="115"/>
+        <ListBox Name="lb_DealerCards" HorizontalAlignment="Left" Height="165" Margin="318,106,0,0" VerticalAlignment="Top" Width="115"/>
         <Button Name="btn_HitMe" Content="Hit me" IsEnabled="False" HorizontalAlignment="Left" Margin="119,342,0,0" VerticalAlignment="Top" Width="75" Click="Btn_HitMe_Click"/>
         <Button Name="btn_Hold" Content="Hold" IsEnabled="False" HorizontalAlignment="Left" Margin="248,342,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Hold_Click"/>
+        <Button Name="btn_NextRound" Content="Next round" IsEnabled="False" HorizontalAlignment="Left" Margin="472,106,0,0" VerticalAlignment="Top" Width="75" Click="Btn_NextRound_Click"/>
 
     </Grid>
 </Window>
