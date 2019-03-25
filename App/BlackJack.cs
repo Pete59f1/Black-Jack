@@ -73,6 +73,26 @@ namespace App
                 play1.Cards.Add(deal.DealCard());
                 NotifySubscribers();
             }
+            else if (playerNumber.Equals(2))
+            {
+                play2.Cards.Add(deal.DealCard());
+                NotifySubscribers();
+            }
+            else
+            {
+                deal.Cards.Add(deal.DealCard());
+                NotifySubscribers();
+            }
+        }
+        public void NextRound()
+        {
+            play1.Cards.Clear();
+            play2.Cards.Clear();
+            deal.Cards.Clear();
+            deal.CardDeck.Clear();
+            deal.CardDeck.AddRange(Deck.GenerateCardDeck());
+            StartOfGame();
+            NotifySubscribers();
         }
 
 

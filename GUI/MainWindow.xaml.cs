@@ -51,6 +51,7 @@ namespace GUI
             lbl_FPlayerName.Content = firstName;
             lbl_SPlayerName.Content = secondName;
             lbl_DealerName.Content = dealerName;
+            jack.RegisterSubscriber(this);
 
             NewGameStart();
         }
@@ -94,6 +95,7 @@ namespace GUI
             currentPlayer = 1;
             btn_NextRound.IsEnabled = false;
             btn_Hold.IsEnabled = true;
+            jack.NextRound();
         }
         //Buttons
 
@@ -156,6 +158,17 @@ namespace GUI
             PrintCards(1);
             PrintCards(2);
             PrintCards(3);
+        }
+        private bool PlayerLose(int playerNumber)
+        {
+            bool q = false;
+            if (playerNumber.Equals(1))
+            {
+                if (int.Parse(lbl_FPlayerPoints.Content) > 21)
+                {
+
+                }
+            }
         }
 
 
