@@ -56,7 +56,7 @@ namespace GUI
         }
         private void Btn_HitMe_Click(object sender, RoutedEventArgs e)
         {
-            
+            jack.HitMe(currentPlayer);
         }
         private void Btn_Hold_Click(object sender, RoutedEventArgs e)
         {

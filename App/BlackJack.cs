@@ -66,21 +66,30 @@ namespace App
             return points;
         }
 
+        public void HitMe(int playerNumber)
+        {
+            if (playerNumber.Equals(1))
+            {
+                play1.Cards.Add(deal.DealCard());
+                NotifySubscribers();
+            }
+        }
+
 
         //Find data metoder
         public int GetPlayerPoints(int playerNumber)
         {
             if (playerNumber.Equals(1))
             {
-                return play1.Points;
+                return CalcPoints(play1.Cards);
             }
             else if (playerNumber.Equals(2))
             {
-                return play2.Points;
+                return CalcPoints(play2.Cards);
             }
             else
             {
-                return deal.Points;
+                return CalcPoints(deal.Cards);
             }
         }
         public List<string> GetPlayerCards(int playerNumber)
